@@ -8,6 +8,16 @@ This repo includes mock data, assets nad other components featured in our SwiftU
 ## <a name="snippets">📦 Snippets(Code to Copy)</a>
 
 <details>
+<summary><code>Theme Colors</code></summary>
+<br>
+ 
+```swift
+Copy the ThemeColors from above directly into your assets Folder in XCode.
+```
+</details>
+
+
+<details>
 <summary><code>What is new custom icons</code></summary>
 <br>
  
