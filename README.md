@@ -59,3 +59,10 @@ enum PageSelection: CaseIterable {
 ```
 
 </details>
+
+
+```swift
+Copy the ProfileImages folder from above directly into your assets Folder in XCode.
+```
+</details>
+
