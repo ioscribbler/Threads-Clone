@@ -172,7 +172,7 @@ struct MockHelper {
             repostCount: 2,
             sharedCount: 1,
             photos: [
-                "t1","t2","pr1", "pr1", "pr1", "pr1",
+                "pr1", "pr1", "pr1", "pr1",
             ]
         ),
         PostData(
