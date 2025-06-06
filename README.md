@@ -16,6 +16,28 @@ Copy the ThemeColors from above directly into your assets Folder in XCode.
 ```
 </details>
 
+<details>
+<summary><code>Post data</code></summary>
+<br>
+ 
+```swift
+import Foundation 
+
+struct PostData: Identifiable {
+    let id = UUID()
+    var postCreatedDate: Date
+    var profileImage: String
+    var profileName: String
+    var text: String
+    var likeCount: Int
+    var commentCount: Int
+    var repostCount: Int
+    var sharedCount: Int
+    var photos: [String]
+}
+```
+</details>
+
 
 <details>
 <summary><code>What is new custom icons</code></summary>
