@@ -16,6 +16,54 @@ Copy the ThemeColors from above directly into your assets Folder in XCode.
 ```
 </details>
 
+
+<details>
+<summary><code>Date Extension</code></summary>
+<br>
+ 
+```swift
+extension Date {
+    func formattedRelative() -> String {
+        let now = Date()
+        let calendar = Calendar.current
+
+        guard
+            let minutes = calendar.dateComponents(
+                [.minute],
+                from: self,
+                to: now
+            ).minute,
+            let hours = calendar.dateComponents(
+                [.hour],
+                from: self,
+                to: now
+            )
+                .hour,
+            let days = calendar.dateComponents(
+                [.day],
+                from: self,
+                to: now
+            ).day
+        else {
+            return ""
+        }
+
+        if minutes < 60 {
+            return "\(minutes)m"
+        } else if hours < 24 {
+            return "\(hours)h"
+        } else if days <= 10 {
+            return "\(days)d"
+        } else {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            return formatter.string(from: self)
+        }
+    }
+}
+```
+</details>
+
 <details>
 <summary><code>Post data</code></summary>
 <br>
