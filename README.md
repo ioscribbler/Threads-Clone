@@ -101,7 +101,7 @@ Copy the ProfileImages folder from above directly into your assets Folder in XCo
 ```swift
 import SwiftUI
 
-struct MockingHelper {
+struct MockHelper {
     static let whatIsNewActionIcons: [Image] = [
         Image(systemName: "photo.on.rectangle.angled"),
         Image(systemName: "camera"),
