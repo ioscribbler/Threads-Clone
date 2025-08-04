@@ -300,3 +300,64 @@ struct MockHelper {
 ```
 
 </details>
+
+<details>
+<summary><code>ThreadsIconShape</code></summary>
+
+<br>
+
+```swift
+import SwiftUI
+
+struct ThreadsIconShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        let scaleX = rect.width / 48
+        let scaleY = rect.height / 48
+
+        func scale(_ x: CGFloat, _ y: CGFloat) -> CGPoint {
+            CGPoint(x: x * scaleX, y: y * scaleY)
+        }
+
+        path.move(to: scale(39.9999, 16))
+        path.addCurve(
+            to: scale(7.99995, 16),
+            control1: scale(35.9999, 0),
+            control2: scale(11.9999, 0)
+        )
+        path.addCurve(
+            to: scale(23.9999, 44),
+            control1: scale(3.99995, 32),
+            control2: scale(10.9999, 44)
+        )
+        path.addCurve(
+            to: scale(31.9999, 24),
+            control1: scale(36.9999, 44),
+            control2: scale(43.9999, 28.8)
+        )
+
+        path.move(to: scale(31.9999, 24))
+        path.addCurve(
+            to: scale(17.9999, 32),
+            control1: scale(19.9999, 19.2),
+            control2: scale(13.9999, 28)
+        )
+        path.addCurve(
+            to: scale(31.9999, 24),
+            control1: scale(21.9999, 36),
+            control2: scale(31.9999, 34)
+        )
+
+        path.move(to: scale(31.9999, 24))
+        path.addCurve(
+            to: scale(17.9999, 16),
+            control1: scale(31.9999, 14),
+            control2: scale(21.9999, 12)
+        )
+
+        return path
+    }
+}
+```
+
+</details>
